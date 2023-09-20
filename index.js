@@ -28,3 +28,5 @@ function newItem(source, leftValue, bottomValue) {
 }
 
 newItem("assets/sword.png", "500px", "405px");
+newItem("assets/shield.png", "165px", "185px");
+newItem("assets/staff.png", "600px", "100px");
