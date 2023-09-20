@@ -14,13 +14,17 @@ newImage("assets/pillar.png", "350px", "100px");
 newImage("assets./crate.png", "150px", "200px");
 newImage("assets/well.png", "500px", "425px");
 
-let sword = document.createElement("img");
-sword.src = "assets/sword.png";
-sword.position = "fixed";
-sword.left = "500px";
-sword.bottom = "405px";
-document.body.append(sword);
+function newItem(source, leftValue, bottomValue) {
+   let newItem = document.createElement("img");
+   newItem.src = source;
+   newItem.style.position = "fixed";
+   newItem.style.left = leftValue;
+   newItem.style.bottom = bottomValue;
+   document.body.append(newItem);
 
-sword.addEventListener("click", function () {
-   sword.remove();
-});
+   newItem.addEventListener("click", function () {
+      newItem.remove();
+   });
+}
+
+newItem("assets/sword.png", "500px", "405px");
